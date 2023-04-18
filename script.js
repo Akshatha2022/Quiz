@@ -2,7 +2,7 @@ var startButton = document.getElementById("start-button");
 
 
 var questionElements = document.getElementById('quiz');
-var topScores = document.getElementById('btn-scores');
+var topScores = document.getElementById('btn-score');
 var timeLeft = document.getElementById('timer');
 var seconds = 60;
 var highScore = 0;
@@ -51,8 +51,7 @@ function startQuiz() {
     console.log("start");
 
     document.querySelector('.introduction')
-    // //.classList.add('hide');
-    // //questionElements.classList.remove('hide');
+    questionElements.classList.remove('hide');
     askQuestion()
 
 };  
@@ -60,55 +59,20 @@ function startQuiz() {
 function askQuestion() {
     document.getElementById('question-text').textContent = questions[index].question;
     document.getElementById('answer-buttons').innerHTML = ''
-    questions[index].choices.forEach(function (choice) {
-        var buttonChoice = document.createElement('button')
-        buttonChoice.value = choice
-        buttonChoice.innerHTML += choice
-        // buttonChoice.setAttribute('answer-buttons', choice);
-        // buttonChoice.setAttribute('value', choice);
-        buttonChoice.textContent = index + 1 + ". " + choice;
-
-        buttonChoice.onclick = questions[index].question;
-        buttonChoice.addEventListener("click", function(){
+    questions[index].choices.forEach(function(choice){
+        var button = document.createElement('button')
+        button.textContent = choice;
+        button.setAttribute('value', choice);
+        button.addEventListener("click", function(){
         if(this.value !== questions[index].answer){
-            seconds -= 5
-            highScore -= 5
-            console.log('wrong') 
-        //     var secondsTimer = seconds,
-        //     display = document.querySelector('#time');
-        // startTimer(secondsTimer, display);
-        } else {
-            seconds += 5
-            highScore += 5
-            console.log('right')}
+            console.log('wrong')
+        } else {console.log('right')}
         index++;
-        if (index == 8){
-            alert ('HighScore: ' +  highScore);
-            window.location.href = "index.html";
-        }
         askQuestion();
+        });
 
 
         document.getElementById('answer-buttons').appendChild(button);
     })
 
-
-});
-
-function startTimer(duration, display) {
-    var timer = duration //seconds;
-    setInterval(function () {
-        seconds = parseInt(timer , 10)
-        display.textContent = seconds;
-
-        if (--timer < 0) {
-            timer = duration;
-        }
-    }, 1000);
-}
-
-window.onload = function () {
-   var secondsTimer = seconds,
-        display = document.querySelector('#time');
-    startTimer(secondsTimer, display);
-}};
+};
