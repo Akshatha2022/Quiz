@@ -1,9 +1,11 @@
-var startQuiz = document.getElementById("start-button");
+var startButton = document.getElementById("start-button");
 
-startQuiz.addEventListener("click", function(){
+startButton.addEventListener("click", function(){
     startQuiz();
 
-function startQuiz(){
-    console.log("start")
-}
-})
+});
+
+function startQuiz() {
+    console.log("start");
+
+};
