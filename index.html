@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title> HTML Quiz</title>
-</head>
+    <title>Java Quiz</title>
+  </head>
 
-<body>
+  <body>
     <div class="outer-container">
-        <div class="top-bar">
-            <button>Highscores</button>
-            <p class="timer">30</p>
-          </div>
-        </div>
-       
+      <div class="top-bar">
+        <button>Highscores</button>
+        <p class="timer">30</p>
+      </div>
+    </div>
 
     <div class="inner-container">
-        <header class="quiz-intro">
-            <h1>Coding Quiz Challenge</h1>
-            <p>Try to answer as many correct as you can!</p>
-            <button id="start-button">Start Quiz</button>
-        </header>
-        <!--quiz section-->
-        <main>
-            <div class="questions-screen">
-                <h2>HTML stands for -</h2>
-                <button id="button1">HighText Machine Language</button>
-                <button id="button2">HyperText Markup Language</button> <!--correct answer-->
-                <button id="button3">Both A and B</button>
-                <button id="button4">None of the above</button>
-            </div>
-
-    </div>        
-        </main>
-
+      <header class="introduction">
+        <h1>Coding Quiz Challenge</h1>
+        <p>Try to answer as many correct as you can! All the Best!!</p>
+        <button id="start-button" class="start-btn btn">Start Quiz</button>
+      </header>
+      <!--quiz section-->
+      <main>
+        <div class="question-container">
+          <h2>
+            <h2>HTML stands for -</h2>
+            <button id="button1">HighText Machine Language</button>
+            <button id="button2">HyperText Markup Language</button> 
+            <!--correct answer-->
+            <button id="button3">Both A and B</button>
+            <button id="button4">None of the above</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+          </div>
+        </div>
+      </main>
+    </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
