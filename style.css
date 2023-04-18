@@ -19,7 +19,7 @@ body{
 .outer-container {
     padding: 10px;
     border-radius: 3px;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
