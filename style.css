@@ -15,6 +15,13 @@ body{
     
 }
 
+.btn-scores {
+    color: red;
+    background-color: blueviolet;
+    font-weight: bold;
+}
+
+
 .outer-container {
     padding: 10px;
     border-radius: 3px;
@@ -40,6 +47,7 @@ body{
     justify-content: center;
     border-radius: 5px;
     padding: 5px 10px;
+    font-weight: bold;
 
 }
 
@@ -57,7 +65,8 @@ body{
 .question-container {
     color:rgb(198, 181, 181);
     font-family: monospace;
-    display: none;
+    display: block;
+    font-weight: bold;
     /* change display to block to see question on home screen */
 }
 
@@ -85,7 +94,11 @@ body{
 }
 
 .next-btn {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
+}
+
+.hide {
+    display: none;
 }

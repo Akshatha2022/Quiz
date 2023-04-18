@@ -4,39 +4,40 @@ var startButton = document.getElementById("start-button");
 var questionElements = document.getElementById('quiz');
 var topScores = document.getElementById('btn-scores');
 var timeLeft = document.getElementById('timer');
-
+var seconds = 60;
+var highScore = 0;
 
 var index = 0;
 var questions = [
     {
         question: '1.HTML stands for -',
-        choices:['getElementById','getElementsByClassName','Both A and B','none of the above'],
-        answer: 'getElementsByClassName'
+        choices:['HighText Machine Language','HyperText and links Markup Language','HyperText Markup Language','none of the above'],
+        answer: 'HyperText Markup Language'
     }, 
     {
-        question: '1.HTML stands for -',
-        choices:['getElementById','getElementsByClassName','Both A and B','none of the above'],
-        answer: 'getElementsByClassName'
+        question: '2.Which of the following element is responsible for making the text bold in HTML?',
+        choices:['<pre>','<a>','<b>','<br>'],
+        answer: '<b>'
     }, 
     {
-        question: '1.HTML stands for -',
-        choices:['getElementById','getElementsByClassName','Both A and B','none of the above'],
-        answer: 'getElementsByClassName'
+        question: '3.Which character is used to represent the closing of a tag in HTML?',
+        choices:['@','!','/','.'],
+        answer: '/'
     }, 
     {
-        question: '1.HTML stands for -',
-        choices:['getElementById','getElementsByClassName','Both A and B','none of the above'],
-        answer: 'getElementsByClassName'
+        question: '4. How to insert an image in HTML?',
+        choices:['<img href = "jtp.png" />','<img url = "jtp.png" />','<img link = "jtp.png" />','<img src = "jtp.png" />'],
+        answer: '<img src = "jtp.png" />'
     }, 
     {
-        question: '1.HTML stands for -',
-        choices:['getElementById','getElementsByClassName','Both A and B','none of the above'],
-        answer: 'getElementsByClassName'
+        question: '5. <input> is -',
+        choices:['a format tag','an empty tag.','Both A and B','none of the above'],
+        answer: 'an empty tag'
     }, 
     {
-        question: '1.HTML stands for -',
-        choices:['getElementById','getElementsByClassName','Both A and B','none of the above'],
-        answer: 'getElementsByClassName'
+        question: '6. The <hr> tag in HTML is used for -',
+        choices:['new line','vertical ruler','new paragraph','horizontal ruler'],
+        answer: 'horizontal ruler'
     }, 
 
 ]
