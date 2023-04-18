@@ -56,5 +56,6 @@ body{
 .questions-screen {
     color:rgb(148, 15, 15);
     font-family: monospace;
+    display: none;
 }
 
