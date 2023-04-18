@@ -31,6 +31,28 @@ body{
     border-radius: 3px;
 }
 
+/* copy pasting from an activity to save time */
+
+.inner-container {
+    background: grey;
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.quiz-intro {
+    color: black;
+    margin-bottom: 10vh;
+    margin-right: 10%;
+    margin-left: 10%;
+    display: block;
+}
+
+
 .questions-screen {
     color:rgb(148, 15, 15);
     font-family: monospace;
