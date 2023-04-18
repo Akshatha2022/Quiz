@@ -1,5 +1,4 @@
 
-
 *{
     margin: 0;
     padding: 0;
@@ -10,10 +9,10 @@
 
 
 body{
-    background-color: #e8e867;
+    background-color: #b1b1a2;
     font-family: monospace;
 
-
+    
 }
 
 .outer-container {
@@ -31,31 +30,62 @@ body{
     border-radius: 3px;
 }
 
-/* copy pasting from an activity to save time */
-
 .inner-container {
-    background: grey;
-    height: 100%;
-    width: 50%;
+    background: rgb(215, 202, 202);
+    height: 70%;
+    width: 400px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 5px;
+    padding: 5px 10px;
 
 }
 
+
 .introduction {
-    color: black;
+    color: rgba(0, 0, 0, 0.277);
     margin-bottom: 10vh;
     margin-right: 10%;
     margin-left: 10%;
     display: block;
+    padding: 5px 10px;
 }
 
 
-.questions-screen {
-    color:rgb(148, 15, 15);
+.question-container {
+    color:rgb(198, 181, 181);
     font-family: monospace;
-    display: none;
+    display: block;
+    /* change display to block to see question on home screen */
 }
 
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: rgb(226, 43, 43);
+    border-radius: 5px;
+    outline: none;
+}
+
+.btn.correct {
+    background-color: rgb(123, 47, 255);
+    color: black;
+}
+
+.btn.wrong {
+    background-color: rgb(0, 51, 255);
+    color: black;
+}
+
+.next-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
