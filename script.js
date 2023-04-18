@@ -12,5 +12,6 @@ startButton.addEventListener("click", function(){
 
 function startQuiz() {
     console.log("start");
-
+    questionElements.addEventListener('click', function() {
+    })
 };

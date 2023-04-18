@@ -11,7 +11,7 @@
   <body>
     <div class="outer-container">
       <div class="top-bar">
-        <button class="btn-scores">Highscores</button>
+        <button class="btn">Highscores</button>
         <p class="timer">30</p>
       </div>
     </div>
@@ -24,15 +24,11 @@
       </header>
       <!--quiz section-->
       <main>
-        <div class="question-container">
-          <h2>
-            <h2>HTML stands for -</h2>
-            <button id="button1">HighText Machine Language</button>
-            <button id="button2">HyperText Markup Language</button> 
-            <!--correct answer-->
-            <button id="button3">Both A and B</button>
-            <button id="button4">None of the above</button>
-            <button id="next-btn" class="next-btn btn hide">
+        <div class="question-container hide" id="quiz">
+            <h2 id="question-text">
+            </h2>
+            <div id="answer-buttons" class="btn-grid">
+            
           </div>
         </div>
       </main>
