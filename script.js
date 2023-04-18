@@ -49,9 +49,10 @@ startButton.addEventListener("click", function(){
 
 function startQuiz() {
     console.log("start");
-    document.querySelector('.quiz-intro').classList.add('hide');
-    questionElements.classList.remove('hide');
 
+    document.querySelector('.introduction')
+    // //.classList.add('hide');
+    // //questionElements.classList.remove('hide');
     askQuestion()
 
 };  
@@ -59,11 +60,16 @@ function startQuiz() {
 function askQuestion() {
     document.getElementById('question-text').textContent = questions[index].question;
     document.getElementById('answer-buttons').innerHTML = ''
-    questions[index].choices.forEach(function(choice){
-        var button = document.createElement('button')
-        button.textContent = choice;
-        button.setAttribute('value', choice);
-        button.addEventListener("click", function(){
+    questions[index].choices.forEach(function (choice) {
+        var buttonChoice = document.createElement('button')
+        buttonChoice.value = choice
+        buttonChoice.innerHTML += choice
+        // buttonChoice.setAttribute('answer-buttons', choice);
+        // buttonChoice.setAttribute('value', choice);
+        buttonChoice.textContent = index + 1 + ". " + choice;
+
+        buttonChoice.onclick = questions[index].question;
+        buttonChoice.addEventListener("click", function(){
         if(this.value !== questions[index].answer){
             seconds -= 5
             highScore -= 5
@@ -87,7 +93,7 @@ function askQuestion() {
     })
 
 
-};
+});
 
 function startTimer(duration, display) {
     var timer = duration //seconds;
@@ -105,4 +111,4 @@ window.onload = function () {
    var secondsTimer = seconds,
         display = document.querySelector('#time');
     startTimer(secondsTimer, display);
-};
+}};
