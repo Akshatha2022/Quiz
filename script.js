@@ -65,14 +65,44 @@ function askQuestion() {
         button.setAttribute('value', choice);
         button.addEventListener("click", function(){
         if(this.value !== questions[index].answer){
-            console.log('wrong')
-        } else {console.log('right')}
+            seconds -= 5
+            highScore -= 5
+            console.log('wrong') 
+        //     var secondsTimer = seconds,
+        //     display = document.querySelector('#time');
+        // startTimer(secondsTimer, display);
+        } else {
+            seconds += 5
+            highScore += 5
+            console.log('right')}
         index++;
+        if (index == 8){
+            alert ('HighScore: ' +  highScore);
+            window.location.href = "index.html";
+        }
         askQuestion();
-        });
 
 
         document.getElementById('answer-buttons').appendChild(button);
     })
 
+
+};
+
+function startTimer(duration, display) {
+    var timer = duration //seconds;
+    setInterval(function () {
+        seconds = parseInt(timer , 10)
+        display.textContent = seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+   var secondsTimer = seconds,
+        display = document.querySelector('#time');
+    startTimer(secondsTimer, display);
 };
